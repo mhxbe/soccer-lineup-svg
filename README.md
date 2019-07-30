@@ -10,8 +10,8 @@ I was pitching this vague idea to my awesome colleague, Rob, and he immediately 
 
 - `npm install`
 - `npm start` // spins up a server with nodemon
-- Open browser and surf to `http://localhost:9069/lineup?formation=433&players=1-2-3-4-5-6-7-8-9-10-11`
+- Open browser and surf to [http://localhost:9069/lineup?formation=abc&players=x-y-z](http://localhost:9069/lineup?formation=abc&players=x-y-z)
 
 ## Url
 
-Currenlty, the testing url is `http://localhost:9069/lineup?formation=433&players=1-2-3-4-5-6-7-8-9-10-11`. This will probably change once we optimize this app.
+Currenlty, the testing url is [http://localhost:9069/lineup?formation=433&players=1-2-3-4-5-6-7-8-9-10-11](http://localhost:9069/lineup?formation=433&players=1-2-3-4-5-6-7-8-9-10-11). This will probably change once we optimize this app.
