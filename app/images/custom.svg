@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="400">
+  <style>
+    .number { fill: #5c3281; }
+    .player { fill: #e2e2e2; }
+    .text { font-weight: bold; font-style: italic; font-family: monospace; }
+  </style>
+  <title>Lineup</title>
+  <rect x="0" y="0" height="400" width="580" fill="#3f3154" />
+  <path d="m25 400, 100 -350, 330 0, 100 350z" fill="#342548" />
+  <g transform="translate(10, 10)">
+    <path d="m3.5 0, 20 0, -3.5 17.5, -20 0z" fill="#e2e2e2" />
+    <path d="m23.5 0, 105 0, -3.5 17.5, -105 0z" fill="#5c3281" />
+    <text x="11" y="13" text-anchor="middle" font-size="13" class="number text">0</text>
+    <text x="74" y="13" text-anchor="middle" font-size="13" class="player text">Mikeeeh</text>
+  </g>
+</svg>
