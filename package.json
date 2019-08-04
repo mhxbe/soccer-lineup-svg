@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
-    "start": "nodemon --exec babel-node app/server.js"
+    "start": "nodemon --exec babel-node app/server.js",
+    "serve": "babel-node app/server.js"
   },
   "keywords": [],
   "author": "Mike Henderyckx",
