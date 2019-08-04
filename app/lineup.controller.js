@@ -23,29 +23,40 @@ function readImage(asset, res) {
   });
 }
 
-const players = {
+const playersCollection = {
   '2': 'Dudouit  Emeric',
-  '4': 'Seigers  Rubin',
+  '3': 'Prychynenko  Denis',
   '5': 'Dom  Joren',
-  '7': 'Saint Louis  Dylan',
-  '8': 'Holzhauer Rapha',
+  '7': 'Saint-Louis  Dylan',
+  '8': 'Holzhauser  Rapha',
   '10': 'Maes  Alexander',
   '11': 'Placca  Fessou',
+  '14': 'Seigers  Rubin',
   '15': 'Bourdin  Pierre',
   '17': 'Keersmaecker  Brian',
   '22': 'Bugridze  Irakli',
-  '24': 'Vorogokskiy  Yan',
+  '24': 'Vorogovskiy  Yan',
   '26': 'Brogno  Loris',
-  '27': 'Reda  Halaimia',
+  '27': 'Halaimia  Reda',
   '31': 'Vanhamel  Mike',
   '34': 'Tissoudali  Tarik',
   '72': 'Lejoly  Antoine',
-  '77': 'Van Camp  Jorn',
+  '77': 'Vancamp  Jorn',
 };
 
-export function generatePlayer(playerId, index) {
-  const [lastName] = players[playerId].split('  ');
-  return `<g transform="translate(10, ${(index + 1) * 25})">
+const formations = {
+  433: [
+    [[0, 368], [[225.75, 0]]],
+    [[0, 250], [[40, 0], [150.5, 35], [292, 35], [411.5, 0]]],
+    [[0, 167], [[85, 0], [225, 0], [366.5, 0]]],
+    [[0, 84], [[85, 0], [225, 0], [366.5, 0]]],
+  ],
+};
+
+export function generatePlayer(coordinates, playerIds) {
+  const playerId = playerIds.shift();
+  const [lastName] = playersCollection[playerId].split('  ');
+  return `<g transform="translate(${coordinates.join(', ')})">
     <path d="m3.5 0, 20 0, -3.5 17.5, -20 0z" fill="#e2e2e2" />
     <path d="m23.5 0, 105 0, -3.5 17.5, -105 0z" fill="#5c3281" />
     <text x="11" y="13" text-anchor="middle" font-size="13" class="number text">${playerId}</text>
@@ -53,24 +64,43 @@ export function generatePlayer(playerId, index) {
   </g>`;
 }
 
-export const generateLineup = (req, res) => {
-  const { formation: formationString, players: playersString } = req.query;
-  const formation = formationString.split('');
-  const players = playersString.split('-');
+export function buildPlayers(players, playerIds) {
+  return players
+    .map(coordinates => generatePlayer(coordinates, playerIds))
+    .join('');
+}
+export function buildLineup(formation, playerIds) {
+  return formation
+    .map(
+      ([xyGroup, players]) =>
+        `<g transform="translate(${xyGroup.join(', ')})">
+          ${buildPlayers(players, playerIds)}
+        </g>`
+    )
+    .join('');
+}
 
-  var generatedPlayers = players.map(generatePlayer);
+export const generateLineup = (req, res) => {
+  const { formation, players } = req.query;
+  const playerIds = players.split('-');
+
+  const formationToBuild = formations[formation];
+  if (!formationToBuild) {
+    const message =
+      'Requested formation does not exist. Please try again with another valid formation.';
+    console.warn(message);
+    return res.status(400).send(message);
+  }
 
   var svgString = `<svg xmlns="http://www.w3.org/2000/svg" width="580" height="400">
     <style>.number { fill: #5c3281; } .player { fill: #e2e2e2; } .text { font-weight: bold; font-style: italic; font-family: monospace; }</style>
     <title>Lineup</title>
     <rect x="0" y="0" height="400" width="580" fill="#3f3154" />
     <path d="m25 400, 100 -350, 330 0, 100 350z" fill="#342548" />
-    ${generatedPlayers.join('')}
+    ${buildLineup(formationToBuild, playerIds)}
   </svg>`;
 
   res.setHeader('content-type', 'image/svg+xml');
   console.log('Generated lineup.');
   return res.status(200).send(svgString);
-
-  // return res.status(200).json({ formation, players });
 };
