@@ -7,10 +7,87 @@
   <title>Lineup</title>
   <rect x="0" y="0" height="400" width="580" fill="#3f3154" />
   <path d="m25 400, 100 -350, 330 0, 100 350z" fill="#342548" />
-  <g transform="translate(10, 10)">
-    <path d="m3.5 0, 20 0, -3.5 17.5, -20 0z" fill="#e2e2e2" />
-    <path d="m23.5 0, 105 0, -3.5 17.5, -105 0z" fill="#5c3281" />
-    <text x="11" y="13" text-anchor="middle" font-size="13" class="number text">0</text>
-    <text x="74" y="13" text-anchor="middle" font-size="13" class="player text">Mikeeeh</text>
+  <!-- Keeper -->
+  <g transform="translate(0, 368)">
+    <g transform="translate(225.75, 0)">
+      <path d="m3.5 0, 20 0, -3.5 17.5, -20 0z" fill="#e2e2e2" />
+      <path d="m23.5 0, 105 0, -3.5 17.5, -105 0z" fill="#5c3281" />
+      <text x="11" y="13" text-anchor="middle" font-size="13" class="number text">31</text>
+      <text x="74" y="13" text-anchor="middle" font-size="13" class="player text">Vanhamel</text>
+    </g>
   </g>
+
+  <!-- Defenders -->
+  <g transform="translate(0, 250)">
+    <g transform="translate(40, 0)">
+      <path d="m3.5 0, 20 0, -3.5 17.5, -20 0z" fill="#e2e2e2" />
+      <path d="m23.5 0, 105 0, -3.5 17.5, -105 0z" fill="#5c3281" />
+      <text x="11" y="13" text-anchor="middle" font-size="13" class="number text">24</text>
+      <text x="74" y="13" text-anchor="middle" font-size="13" class="player text">Vorogovskiy</text>
+    </g>
+    <g transform="translate(150.5, 35)">
+      <path d="m3.5 0, 20 0, -3.5 17.5, -20 0z" fill="#e2e2e2" />
+      <path d="m23.5 0, 105 0, -3.5 17.5, -105 0z" fill="#5c3281" />
+      <text x="11" y="13" text-anchor="middle" font-size="13" class="number text">14</text>
+      <text x="74" y="13" text-anchor="middle" font-size="13" class="player text">Seigers</text>
+    </g>
+    <g transform="translate(292, 35)">
+      <path d="m3.5 0, 20 0, -3.5 17.5, -20 0z" fill="#e2e2e2" />
+      <path d="m23.5 0, 105 0, -3.5 17.5, -105 0z" fill="#5c3281" />
+      <text x="11" y="13" text-anchor="middle" font-size="13" class="number text">3</text>
+      <text x="74" y="13" text-anchor="middle" font-size="13" class="player text">Prychynenko</text>
+    </g>
+    <g transform="translate(411.5, 0)">
+      <path d="m3.5 0, 20 0, -3.5 17.5, -20 0z" fill="#e2e2e2" />
+      <path d="m23.5 0, 105 0, -3.5 17.5, -105 0z" fill="#5c3281" />
+      <text x="11" y="13" text-anchor="middle" font-size="13" class="number text">27</text>
+      <text x="74" y="13" text-anchor="middle" font-size="13" class="player text">Halaimia</text>
+    </g>
+  </g>
+
+  <!-- Middfielders -->
+  <g transform="translate(0, 167)">
+    <g transform="translate(85, 0)">
+      <path d="m3.5 0, 20 0, -3.5 17.5, -20 0z" fill="#e2e2e2" />
+      <path d="m23.5 0, 105 0, -3.5 17.5, -105 0z" fill="#5c3281" />
+      <text x="11" y="13" text-anchor="middle" font-size="13" class="number text">8</text>
+      <text x="74" y="13" text-anchor="middle" font-size="13" class="player text">Holzhauser</text>
+    </g>
+    <g transform="translate(225, 0)">
+      <path d="m3.5 0, 20 0, -3.5 17.5, -20 0z" fill="#e2e2e2" />
+      <path d="m23.5 0, 105 0, -3.5 17.5, -105 0z" fill="#5c3281" />
+      <text x="11" y="13" text-anchor="middle" font-size="13" class="number text">77</text>
+      <text x="74" y="13" text-anchor="middle" font-size="13" class="player text">Vancamp</text>
+    </g>
+    <g transform="translate(366.5, 0)">
+      <path d="m3.5 0, 20 0, -3.5 17.5, -20 0z" fill="#e2e2e2" />
+      <path d="m23.5 0, 105 0, -3.5 17.5, -105 0z" fill="#5c3281" />
+      <text x="11" y="13" text-anchor="middle" font-size="13" class="number text">10</text>
+      <text x="74" y="13" text-anchor="middle" font-size="13" class="player text">Maes</text>
+    </g>
+  </g>
+
+  <!-- Strikers -->
+  <g transform="translate(0, 84)">
+    <g transform="translate(85, 0)">
+      <path d="m3.5 0, 20 0, -3.5 17.5, -20 0z" fill="#e2e2e2" />
+      <path d="m23.5 0, 105 0, -3.5 17.5, -105 0z" fill="#5c3281" />
+      <text x="11" y="13" text-anchor="middle" font-size="13" class="number text">7</text>
+      <text x="74" y="13" text-anchor="middle" font-size="13" class="player text">Saint-Louis</text>
+    </g>
+    <g transform="translate(225, 0)">
+      <path d="m3.5 0, 20 0, -3.5 17.5, -20 0z" fill="#e2e2e2" />
+      <path d="m23.5 0, 105 0, -3.5 17.5, -105 0z" fill="#5c3281" />
+      <text x="11" y="13" text-anchor="middle" font-size="13" class="number text">11</text>
+      <text x="74" y="13" text-anchor="middle" font-size="13" class="player text">Placca</text>
+    </g>
+    <g transform="translate(366.5, 0)">
+      <path d="m3.5 0, 20 0, -3.5 17.5, -20 0z" fill="#e2e2e2" />
+      <path d="m23.5 0, 105 0, -3.5 17.5, -105 0z" fill="#5c3281" />
+      <text x="11" y="13" text-anchor="middle" font-size="13" class="number text">26</text>
+      <text x="74" y="13" text-anchor="middle" font-size="13" class="player text">Brogno</text>
+    </g>
+  </g>
+
+
 </svg>
