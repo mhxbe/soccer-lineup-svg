@@ -24,6 +24,7 @@ function readImage(asset, res) {
 }
 
 const playersCollection = {
+  '0': 'Bestaat niet',
   '2': 'Dudouit  Emeric',
   '3': 'Prychynenko  Denis',
   '5': 'Dom  Joren',
@@ -54,8 +55,9 @@ const formations = {
 };
 
 export function generatePlayer(coordinates, playerIds) {
-  const playerId = playerIds.shift();
-  const [lastName] = playersCollection[playerId].split('  ');
+  let playerId = playerIds.shift();
+  let player = playersCollection[playerId] || playersCollection[0];
+  const [lastName] = player.split('  ');
   return `<g transform="translate(${coordinates.join(', ')})">
     <path d="m3.5 0, 20 0, -3.5 17.5, -20 0z" fill="#e2e2e2" />
     <path d="m23.5 0, 105 0, -3.5 17.5, -105 0z" fill="#5c3281" />
