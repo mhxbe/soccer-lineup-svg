@@ -5,7 +5,7 @@ const app = express();
 
 app
   .use(json()) // formerly body-parser
-  .use('/lineup', LineupRoute)
+  .use('/img', LineupRoute)
   .listen(9069, () => {
     console.log(`App listening on port http://localhost:9069`);
   });
